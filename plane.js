@@ -4,21 +4,9 @@ class Plane {
     origin;
     destination;
 
-    constructor(flightNumber) {
+    constructor(flightNumber, airline) {
         this.flightNumber = flightNumber;
-        this.passengers = []; 
-    }
-
-    boardPassenger(passenger) {
-        this.passengers.push(passenger);
-    }
-
-    setDestination(destination) {
-        this.destination = destination;
-    }
-
-    setOrigin(origin) {
-        this.origin = origin;
+        this.airline = airline;
     }
 }
 
