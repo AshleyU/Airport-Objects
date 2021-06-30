@@ -3,6 +3,7 @@ class Plane {
     passengers;
     origin;
     destination;
+    crew;
 
     constructor(flightNumber, airline) {
         this.flightNumber = flightNumber;
