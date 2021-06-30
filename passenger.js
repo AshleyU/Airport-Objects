@@ -1,15 +1,3 @@
-class Passenger {
-    name;
-    bags;
+const Person = require('./Person')
 
-    constructor(name) {
-        this.name = name;
-        this.bags = [];
-    }
-
-    addBag(bag) {
-        this.bags.push(bag);
-    }
-}
-
-module.exports = Passenger;
+class Passenger extends Person {}
