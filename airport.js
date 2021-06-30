@@ -10,5 +10,3 @@ class Airport {
 }
 
 module.exports = Airport
-
-console.log("git test");
