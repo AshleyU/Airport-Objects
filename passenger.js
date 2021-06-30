@@ -6,7 +6,7 @@ class Passenger extends Person {
         this.name = name;
 	}
     callAttendant() {
-        console.log('Excuses me!')
+        return 'Excuses me!';
     }
 }
 

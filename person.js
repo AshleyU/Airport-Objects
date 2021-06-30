@@ -8,7 +8,7 @@ class Person {
     }
 
     addBag(bag) {
-        this.bags.push(bag);
+        return this.bags.push(bag);
     }
 }
 

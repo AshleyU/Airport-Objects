@@ -5,7 +5,7 @@ class Crew extends Person {
 		super(name)
 	}
     AnnounceSafetyRules() {
-        console.log('Please find the safety pamphlet in the seat pocket in front of you...')
+        return 'Please find the safety pamphlet in the seat pocket in front of you...';
     }
 }
 

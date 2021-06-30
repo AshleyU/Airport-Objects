@@ -4,7 +4,8 @@
   "description": "practice with objects in JavaScript as well as unit testing",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest --watchAll",
+    "test:report": "jest --coverage=true"
   },
   "repository": {
     "type": "git",
