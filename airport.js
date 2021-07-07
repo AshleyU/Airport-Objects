@@ -2,6 +2,8 @@ const fsp = require('fs').promises; // Node.js file system module with promises
 const fs = require('fs'); // Node.js file system module for standard callbacks
 const path = require('path'); // Node.js directories and file paths module
 const Passenger = require('./Passenger');
+const { readFile } = require('fs/promises');
+
 
 /**
  * Represents an airport.
@@ -80,16 +82,19 @@ class Airport {
         this.removePlane(plane);       
     }
 
-    getInfoCallback(){
-
-    }
-
-    getInfoPromise() {
-
-    }
-
-    getInfoAsyncAwait() {
-        
+    getInfo() {
+        return new Promise((resolve, reject) => {
+            fs.readFile('./airportsData.json', (err, data) => {
+                if (err) return reject(err)
+                
+                const airports = JSON.parse(String(data))
+                const [airport] = Object.keys(airports)
+                    .filter(airportCode => airports[airportCode].iata === this.name)
+                    .map(airportCode => airports[airportCode])
+                
+                resolve(airport)
+            })
+        })
     }
 
 }
